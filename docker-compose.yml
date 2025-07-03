@@ -1,0 +1,15 @@
+version: "28.1.1"
+services:
+  mysql:
+    image: mysql:8.0.12
+    container_name: bd_mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: database
+      MYSQL_USER: root
+      MYSQL_PASSWORD: root123
+    volumes:
+      - ./mysql:/var/lib/mysql
+    ports:
+      - "5000:3306"
